@@ -1,0 +1,519 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+@keyframes sfb{
+    0%{
+        transform: translateY(-100%);
+    }
+
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes sft{
+    0%{
+        transform: translateY(100%);
+    }
+
+    100%{
+        transform: translateY(0%);
+    }
+}
+@keyframes sfr{
+    0%{
+        transform: translateX(100%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+@keyframes sfl{
+    0%{
+        transform: translateX(-100%);
+    }
+
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+:root
+{
+    --pc:#047aed;
+    --sc:#1c3fa8;
+    --dc:#002240;
+    --lc:#f4f4f4;
+}
+
+ *{
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+ }
+
+ body{
+     font-family: lato,sans-serif;
+     color: #333;
+     line-height: 1.6;
+}
+
+
+
+ ul{
+     list-style-type: none;
+ }
+
+ a{
+     text-decoration: none;
+     color: #333;
+}
+
+h1,h2{
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 10px 0;
+}
+
+p{
+    margin: 10px 0;
+}
+
+img{
+    width: 100%;
+}
+
+/* This is for Nav Bar-------------------------------------------*/
+
+.navbar{
+    background-color: var(--pc);
+    color: white;
+    height: 70px;
+}
+
+.navbar .flex{
+    justify-content: space-between;
+
+}
+
+.navbar ul{
+    display: flex;
+}
+
+.navbar a{
+    color: white;
+    padding: 10px;
+    margin: 0 5px;
+}
+
+.navbar a:hover{
+    border-bottom: 2px solid white;
+}
+
+/*Show Case------------------------------------------------------------------------------*/
+
+.showcase{
+    height: 400px;
+    background-color: var(--pc);
+    color: white;
+    position: relative;
+
+}
+
+                            /*for the design*/
+
+                            
+ .showcase::after {
+    content: '';
+    position: absolute;
+    height: 100px;
+    bottom: -70px;
+    right: 0;
+    left: 0;
+    background: #fff;
+    transform: skewY(-3deg);
+    -webkit-transform: skewY(-3deg);
+    -moz-transform: skewY(-3deg);
+    -ms-transform: skewY(-3deg);
+     }
+
+.showcase h1{
+    font-size: 40px;
+}
+
+.showcase p{
+    margin: 20px 0;
+}
+ 
+.showcase .grid{
+    grid-template-columns: 55% 45%;
+    gap: 20px;
+    overflow: visible;
+}
+
+/* forms--------------------------------*/
+.showcase-form{
+    position: relative;
+    top: 60px;
+    height: 350px;
+    width: 400px;
+    z-index: 100;
+    animation: sfr 0.5s ease-in;
+}
+
+.showcase-text{
+    animation: sfl 0.5s ease-in;
+}
+
+.showcase-form .form-control{
+
+    margin: 30px 0;
+}
+
+.showcase-form input[type='text']{
+    border: 0;
+    
+    border-bottom: 2px solid grey;
+    width: 100%;
+    padding: 5px;
+
+}
+.showcase-form input[type='email']{
+    border: 0;
+    border-bottom: 2px solid grey;
+    width: 100%;
+    padding: 5px;
+}
+.showcase-form input:focus{
+    outline: none;
+}
+
+.hidden 
+{
+    visibility: hidden;
+    height: 0;
+}
+
+/*stats------------------------------------------------------*/
+
+.stats{
+    padding-top: 100px;
+    color:black 
+}
+
+#grid3{
+    grid-template-columns: repeat(3,1fr);
+    
+}
+.stats-heading{
+    max-width: 500px;
+    margin: auto !important;
+    text-align: center;
+    animation: sfb 0.5s ease-in;
+}
+}
+
+.stats .grid h3{
+    font-size: 35px;
+}
+.stats .grid p{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+/*CLI---------------------------------------------*/
+
+.cli .grid{
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+}
+
+
+.cli img{
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 2;
+
+}
+
+/*cloud-----------------------------------------------*/
+.cloud .grid{
+    grid-template-columns: 4fr 3fr;
+}
+
+
+
+/*languages-----------------------------------------------------------------*/
+.languages .flex{
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.languages .card{
+
+    text-align: center;
+    margin: 18px   40px;
+    transition: transform 0.2s ease;
+
+}
+.languages .card img{
+    width:85px;
+    height: 80px;
+
+}
+.languages .card h4{
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.languages .card:hover{
+    transform: translateY(-15px);
+}
+
+/*-----Features---------------------------------------------------*/
+.features-head img,.features-sub-head img{
+
+    width: 200px;
+    justify-self: flex-end;
+
+}
+.features-sub-head img{
+
+    width: 300px;
+    justify-self: flex-end;
+
+}
+
+/*main----------------------------------------------------------------*/
+
+.features-main .card > i
+{margin-right: 20px
+
+}
+
+.features-main .grid{
+    padding: 30px;
+}
+
+.features-main .grid .n1
+{
+    grid-column: 1 /span 3;
+
+}
+
+.features-main .grid .n2{
+    grid-column: 1 /span 2;
+
+}
+
+
+/*-------Docs-Mian----------------------------------*/
+
+.docs-head img{
+    width: 300px;
+    justify-self: flex-end;
+}
+
+.docs-main h3{
+    margin: 20px 0;
+}
+
+.docs-main  .grid{
+    grid-template-columns: 1fr 2fr;
+    align-items: flex-start;
+
+}
+
+.docs-main nav li{
+    font-size: 1rem;
+    padding: 5px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid rgb(107, 107, 107);
+}
+
+.docs-main a:hover{
+    font-weight: bold;
+}
+.alert{
+    background:var(--lc) ;
+    padding: 5px 10px;
+}
+.alert-success{
+    background: rgb(7, 155, 1);
+    color: white;
+
+}
+
+.alert-error{
+    background: red;
+    color: white;
+}
+.alert p{
+    margin-left: 10px;
+}
+
+
+code,pre{
+    background: #333;
+    color: white;
+    padding: 10px;
+}
+
+/*-------------------------------------------footer----------*/
+
+.footer a{
+    color: white;
+    padding: 10px 10px;
+}
+
+
+/*Tablets------------------------------------*/
+
+@media(max-width: 768px){
+
+    .navbar{
+        flex-direction: column;
+    }
+
+    .grid,
+    .showcase .grid,
+    .stats .grid,
+    .cli .grid,
+    .cloud .grid,
+    .features-main .grid,
+    .docs-main .grid 
+    {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    }
+
+
+    .showcase{
+        height: auto;
+        text-align: center;
+    }
+
+    .showcase-text{
+        margin-top: 40px;
+    }
+    
+    .showcase-form{
+        justify-self: center;
+        margin: auto;
+    }
+
+    #grid3{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: 1fr; 
+    }
+    
+    .stats-heading{
+        margin:1rem auto !important;  
+    }
+    
+   
+  .cli .grid > *:first-child {
+    grid-column: 1;
+    grid-row: 1;
+    grid-template-rows: 1fr;
+    
+  }
+
+  .cli h3{
+      text-align: center;
+  }
+   
+  .alert flex{
+      justify-content: flex-end;
+
+  }
+  .footer li{
+      margin: 10px 0;
+  }
+  .footer a:hover{
+      border-bottom: 2px solid white;
+
+  }
+
+  .showcase-text{
+    animation: sft 0.5s ease-in;
+    }
+  .showcase-form{
+    animation: sft 0.5s ease-in;
+    }
+  
+
+  /*features------------------------------*/
+  .features-main .grid .n2,
+    .features-main .grid .n1 {
+      grid-column: 1;
+    }
+
+    .features-main .grid .n4  i {
+        padding-left: -10px;
+    }
+
+    .features-sub-head .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    
+    
+    .features-head img,
+    .features-sub-head img,
+    .docs-head img{
+        justify-self: center;
+    }
+
+    .features-head ,
+    .features-sub-head ,
+    .docs-head {
+        text-align: center;
+    }
+
+    
+    .docs-head .grid img{
+        width: 150px;
+        height: 150px;
+    }
+    
+    .footer .grid-3{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+}
+
+/* Mobile------------------------------------*/
+
+@media(max-width: 500px){
+
+    .navbar{
+        height: 100px;
+    }
+
+    .navbar .flex{
+        flex-direction: column;
+      
+    }
+
+    .navbar ul{
+        background-color: rgba(0,0,0, 0.1);
+        padding: 10px;
+        padding-bottom: 15px;
+        
+    }
+    .showcase-form{
+        width: 250px;
+    }
+    .navbar a:hover{
+        padding-bottom: 5px;
+    }
+    .docs-head .grid{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .features-head .grid{
+        grid-template-columns: repeat(1,1fr) !important;
+    }
+    
+   
+}
